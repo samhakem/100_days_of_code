@@ -6,4 +6,6 @@
 fruits = ['Apple', 'Peach', 'Pear']
 
 for fruit in fruits:
-    print(fruit)
+    print('has no ' + fruit + ' in it.')
+    print(fruit + ' pie')
+print(fruits)
