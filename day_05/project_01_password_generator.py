@@ -16,9 +16,12 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 # Eazy Level - Order not randomised: Randomised anyway
 # e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
-password_easy = ''
+password_easy = ''  # Declare an empty string
 
-for char in range(1, nr_letters + 1):  # Non-inclusive end of slice, hence plus 1
+# Non-inclusive end of slice, hence plus 1 to reach input no.
+# Iterate over range starting at 1, up to input no.
+# Take empty string, increment random choice of string, integer, symbol into it with +=
+for char in range(1, nr_letters + 1):
     password_easy += random.choice(letters)
 
 for num in range(1, nr_numbers + 1):
@@ -27,6 +30,7 @@ for num in range(1, nr_numbers + 1):
 for sym in range(1, nr_symbols + 1):
     password_easy += random.choice(symbols)
 
+# Join, shuffle and print using length of now filled string
 print(''.join(random.sample(password_easy, len(password_easy))))
 
 # Hard Level - Order of characters randomised:
