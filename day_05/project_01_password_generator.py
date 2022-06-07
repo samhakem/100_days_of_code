@@ -58,7 +58,5 @@ password_numbers = ''.join(pick_random_numbers(numbers))
 
 print(str(password_letters), str(password_symbols), str(password_numbers))
 
-# print(''.join(pick_random_letter(letters)), end='' ''.join(pick_random_numbers(numbers)))
-
 # Hard Level - Order of characters randomised:
 # e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
