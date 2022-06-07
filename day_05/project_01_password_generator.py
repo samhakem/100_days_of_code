@@ -23,6 +23,8 @@ def pick_random_letter(array: object) -> object:
     """
 
     :rtype: object
+    :param array:
+    :return:
     """
     for x in letters:
         return list(set(letters))[0: nr_letters]
