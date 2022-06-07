@@ -1,5 +1,4 @@
 # Password Generator Project
-
 import random
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
@@ -10,59 +9,68 @@ symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 print("Welcome to the PyPassword Generator!")
 nr_letters = int(input("How many letters would you like in your password?\n"))
-nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
+nr_symbols = int(input(f"How many symbols would you like?\n"))
 
 
-# Eazy Level - Order not randomised:
+# Eazy Level - Order not randomised: Randomised anyway
 # e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
-# selected_letters = random.sample(letters, nr_letters)
-# print(selected_letters)
+password_easy = ''
+
+for char in range(1, nr_letters + 1):  # Non-inclusive end of slice, hence plus 1
+    password_easy += random.choice(letters)
+
+for num in range(1, nr_numbers + 1):
+    password_easy += random.choice(numbers)
+
+for sym in range(1, nr_symbols + 1):
+    password_easy += random.choice(symbols)
+
+print(''.join(random.sample(password_easy, len(password_easy))))
 
 # Hard Level - Order of characters randomised:
 # e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
-def pick_random_letter(array: object) -> object:
-    """
-
-    :rtype: object
-    :param array:
-    :return:
-    """
-    for x in letters:
-        return list(set(letters))[0: nr_letters]
-
-
-def pick_random_symbols(array: object) -> object:
-    """
-
-    :rtype: object
-    :param array:
-    :return:
-    """
-
-    for s in symbols:
-        return list(set(symbols))[0: nr_symbols]
-
-
-def pick_random_numbers(array: object) -> object:
-    """
-
-    :rtype: object
-    :param array:
-    :return:
-    """
-
-    for n in numbers:
-        return list(set(numbers))[0: nr_numbers]
-
-
-password_letters = pick_random_letter(letters)
-password_symbols = pick_random_symbols(symbols)
-password_numbers = pick_random_numbers(numbers)
-
-final_password = password_letters + password_symbols + password_numbers
-
-print(''.join(random.sample(final_password, len(final_password))))
-# print(password_letters, password_symbols, password_numbers, sep='')
+# def pick_random_letter(array: object) -> object:
+#     """
+#
+#     :rtype: object
+#     :param array:
+#     :return: list:
+#     """
+#     for x in letters:
+#         return list(set(letters))[0: nr_letters]
+#
+#
+# def pick_random_symbols(array: object) -> object:
+#     """
+#
+#     :rtype: object
+#     :param array:
+#     :return: list:
+#     """
+#
+#     for s in symbols:
+#         return list(set(symbols))[0: nr_symbols]
+#
+#
+# def pick_random_numbers(array: object) -> object:
+#     """
+#
+#     :rtype: object
+#     :param array:
+#     :return: list:
+#     """
+#
+#     for n in numbers:
+#         return list(set(numbers))[0: nr_numbers]
+#
+#
+# password_letters = ''.join(pick_random_letter(letters))
+# password_symbols = ''.join(pick_random_symbols(symbols))
+# password_numbers = ''.join(pick_random_numbers(numbers))
+#
+# final_password = password_letters + password_symbols + password_numbers
+#
+# print(''.join(random.sample(final_password, len(final_password))))
