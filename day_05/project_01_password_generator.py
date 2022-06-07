@@ -21,17 +21,39 @@ password_easy = ''  # Declare an empty string
 # Non-inclusive end of slice, hence plus 1 to reach input no.
 # Iterate over range starting at 1, up to input no.
 # Take empty string, increment random choice of string, integer, symbol into it with +=
-for char in range(1, nr_letters + 1):
-    password_easy += random.choice(letters)
-
-for num in range(1, nr_numbers + 1):
-    password_easy += random.choice(numbers)
-
-for sym in range(1, nr_symbols + 1):
-    password_easy += random.choice(symbols)
+# for char in range(1, nr_letters + 1):
+#     password_easy += random.choice(letters)
+#
+# for num in range(1, nr_numbers + 1):
+#     password_easy += random.choice(numbers)
+#
+# for sym in range(1, nr_symbols + 1):
+#     password_easy += random.choice(symbols)
 
 # Join, shuffle and print using length of now filled string
-print(''.join(random.sample(password_easy, len(password_easy))))
+# print(''.join(random.sample(password_easy, len(password_easy))))
+
+password_hard = []
+
+for char in range(1, nr_letters + 1):
+    password_hard.append(random.choice(letters))
+
+for num in range(1, nr_numbers + 1):
+    password_hard.append(random.choice(numbers))
+
+for sym in range(1, nr_symbols + 1):
+    password_hard.append(random.choice(symbols))
+
+random.shuffle(password_hard)
+
+password = ''
+
+for char in password_hard:
+    password += char
+
+print(f'Your password is: {password}')
+
+# print(''.join(random.shuffle(password_hard, len(password_hard))))
 
 # Hard Level - Order of characters randomised:
 # e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
