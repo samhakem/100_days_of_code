@@ -25,10 +25,11 @@ def pick_random_letter(array: object) -> object:
 
     :rtype: object
     """
-    return list(set(letters))[0: nr_letters]
+    for x in letters:
+        return list(set(letters))[0: nr_letters]
 
 
-print(pick_random_letter(letters))
+print(''.join(pick_random_letter(letters)))
 
 # Hard Level - Order of characters randomised:
 # e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
