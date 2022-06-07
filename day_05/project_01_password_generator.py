@@ -30,7 +30,7 @@ for num in range(1, nr_numbers + 1):
 for sym in range(1, nr_symbols + 1):
     password_easy += random.choice(symbols)
 
-Join, shuffle and print using length of now filled string
+# Join, shuffle and print using length of now filled string
 print(''.join(random.sample(password_easy, len(password_easy))))
 
 # Hard Level - Order of characters randomised:
