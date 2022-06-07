@@ -1,5 +1,6 @@
 # Password Generator Project
 # import random
+import random
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
            'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
@@ -57,8 +58,11 @@ def pick_random_numbers(array: object) -> object:
         return list(set(numbers))[0: nr_numbers]
 
 
-password_letters = ''.join(pick_random_letter(letters))
-password_symbols = ''.join(pick_random_symbols(symbols))
-password_numbers = ''.join(pick_random_numbers(numbers))
+password_letters = pick_random_letter(letters)
+password_symbols = pick_random_symbols(symbols)
+password_numbers = pick_random_numbers(numbers)
 
-print(password_letters, password_symbols, password_numbers, sep='')
+final_password = password_letters + password_symbols + password_numbers
+
+print(''.join(random.sample(final_password, len(final_password))))
+# print(password_letters, password_symbols, password_numbers, sep='')
