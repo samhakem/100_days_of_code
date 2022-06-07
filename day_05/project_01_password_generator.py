@@ -19,6 +19,9 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 # selected_letters = random.sample(letters, nr_letters)
 # print(selected_letters)
 
+# Hard Level - Order of characters randomised:
+# e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
 def pick_random_letter(array: object) -> object:
     """
 
@@ -59,8 +62,3 @@ password_symbols = ''.join(pick_random_symbols(symbols))
 password_numbers = ''.join(pick_random_numbers(numbers))
 
 print(password_letters, password_symbols, password_numbers, sep='')
-
-# print(str(password_letters), str(password_symbols), str(password_numbers))
-
-# Hard Level - Order of characters randomised:
-# e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
