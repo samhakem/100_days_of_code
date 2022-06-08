@@ -44,3 +44,6 @@ for score in student_scores:
         highest_score = score
 
 print(f'The highest score in the class is: {highest_score}')
+
+# Simple way to check to see if an input is missing
+if var == '' or len(var) == 0:
