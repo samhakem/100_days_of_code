@@ -17,3 +17,4 @@ my_function()
 cool_number = 12 + 30
 cool_number * 5  # Multiplying a variable does not affect it's assigned value
 print(cool_number)
+
