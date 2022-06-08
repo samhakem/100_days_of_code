@@ -10,7 +10,7 @@ prices = {'2 lb or less': 1.50,
 
 def ground_shipping(weight: int) -> int:
     """
-    :type: weight: int - the price per pound weight of package.
+    :type: weight: int - the price per pound weight of the package.
     :rtype: Int
     """
 
