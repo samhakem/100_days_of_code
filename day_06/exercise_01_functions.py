@@ -13,3 +13,7 @@ def my_function():
 
 # Call a function by calling the function name followed by parentheses - where any params might go
 my_function()
+
+cool_number = 12 + 30
+cool_number * 5  # Multiplying a variable does not affect it's assigned value
+print(cool_number)
