@@ -20,3 +20,4 @@ while number_of_hurdles > 0:
     jump_1()
     number_of_hurdles -= 1
     print(number_of_hurdles)
+
