@@ -1,13 +1,4 @@
 # Ground shipping
-
-prices = {'2 lb or less': 1.50,
-          'Over 2 lb but less than or equal to 6 lb': 3.00,
-          'Over 6 lb but less than or equal to 10 lb': 4.00,
-          'Over 10 lb': 4.75,
-          'flat_charge': 20.00
-          }
-
-
 def ground_shipping(weight: int) -> int:
     """
     :type: weight: int - the price per pound weight of the package.
@@ -35,6 +26,6 @@ def ground_shipping(weight: int) -> int:
     return cost
 
 
-customer_calc = ground_shipping(7.5)
+customer_calc = ground_shipping(3)
 print(customer_calc)
 
