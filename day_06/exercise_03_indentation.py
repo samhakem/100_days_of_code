@@ -10,3 +10,4 @@ print('outside the code block')
 # Spaces are preferred indentation method
 
     # Use four separate hits of the space bar :S
+    # Or just tab in your IDE
