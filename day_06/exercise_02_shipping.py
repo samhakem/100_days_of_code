@@ -28,4 +28,3 @@ def ground_shipping(weight: int) -> int:
 
 customer_calc = ground_shipping(3)
 print(customer_calc)
-
