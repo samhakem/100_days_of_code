@@ -27,7 +27,7 @@ for i in range(len(chosen_word)):
 print(display, sep='', end='\n')
 
 # Ask the user to guess a letter
-guess = input('So, Sophie, what\'s your first letter?\n').lower()
+guess = input('So then, what\'s your first letter?\n').lower()
 
 # Is the guessed letter in the word
 for i in range(len(chosen_word)):
