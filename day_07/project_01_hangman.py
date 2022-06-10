@@ -10,17 +10,30 @@ import random
 print('Welcome to Hangman!')
 
 # Word list
-word_list = ['aardvark','baboon', 'camel']
+word_list = ['aardvark', 'baboon', 'camel']
 
 # Randomly choose a word
 chosen_word = random.choice(word_list)
+
+# Testing
+print(f'For testing purposes, the chosen word is: {chosen_word}')
+
+# Create and empty list called display
+display = []
+
+for i in range(len(chosen_word)):
+    display.append('_')
+
+print(display, sep='', end='\n')
 
 # Ask the user to guess a letter
 guess = input('So, Sophie, what\'s your first letter?\n').lower()
 
 # Is the guessed letter in the word
-for letter in chosen_word:
-    if letter == guess:
-        print('Correct!')
+for i in range(len(chosen_word)):
+    if chosen_word[i] == guess:
+        display[i] = guess
     else:
-        print('Wrong :\'(')
+        display[i] = '_'
+
+print(display, sep='', end='\n')
