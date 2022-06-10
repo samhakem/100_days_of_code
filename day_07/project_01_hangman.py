@@ -26,10 +26,11 @@ display = []
 for i in range(len(chosen_word)):
     display.append('_')
 
-tries = len(display)
+win_counter = len(display)
+lose_counter = len(display)
 
 # Is the guessed letter in the word
-while tries > 0:
+while win_counter > 0:
     print(display, sep='', end='\n')
 
     # Ask the user to guess a letter
@@ -39,7 +40,8 @@ while tries > 0:
         if chosen_word[i] == guess:
             display[i].replace('_', guess)
             display[i] = guess
-            tries -= 1
-            print(tries)
+            win_counter -= 1
+            print(f'Counting down no. of tries at: {win_counter}')
+
 
 print(f'Congrats! You finished your word: {display}')
