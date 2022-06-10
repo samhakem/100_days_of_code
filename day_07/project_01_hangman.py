@@ -1,12 +1,26 @@
-# Hangman
+# Hangman V2
 
+# Start
+# Execute code start
+
+# Imports
 import random
 
-# Open the words text file in read-only mode
-with open('hangman_words/words.txt', 'r') as file:
-    all_text = file.read()
-    words = all_text.split(' ')
+# Welcome message
+print('Welcome to Hangman!')
 
-    hangman_words = []
+# Word list
+word_list = ['aardvark','baboon', 'camel']
 
-print(words)
+# Randomly choose a word
+chosen_word = random.choice(word_list)
+
+# Ask the user to guess a letter
+guess = input('So, Sophie, what\'s your first letter?\n').lower()
+
+# Is the guessed letter in the word
+for letter in chosen_word:
+    if letter == guess:
+        print('Correct!')
+    else:
+        print('Wrong :\'(')
